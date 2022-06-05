@@ -1,0 +1,18 @@
+version: '2.1'
+
+services:
+
+  mysql:
+    image: mysql:5.7
+    volumes:
+        - mysql-db:/var/lib/mysql
+    environment:
+      MYSQL_HOST: localhost
+      MYSQL_USER: admin
+      MYSQL_PASSWORD: root
+      MYSQL_DATABASE: f1
+      MYSQL_ROOT_PASSWORD: root
+    ports:
+        - 3306:3306
+volumes:
+  mysql-db:

@@ -1,0 +1,43 @@
+.raceContainer {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 10px;
+}
+
+.w100 {
+    width: 20%;
+}
+
+.formResult {
+    width: 500px;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+}
+
+.imagem {
+    width: 70%;
+    height: auto;
+}
+
+.pneus {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+@media (max-width: 1000px) {
+    .raceContainer {
+        flex-direction: column;
+    }
+
+    .w100 {
+        width: 100%;
+    }
+
+    .imagem {
+        width: 100%;
+        height: auto;
+    }
+}
