@@ -75,7 +75,7 @@ function App() {
   const [pitstops, setPitStops] = useState()
 
   function getPitStopsGP() {
-    axios.get(`http://ergast.com/api/f1/${ano}/${gp}/pitstops.json`).then(response => {
+    axios.get(`https://ergast.com/api/f1/${ano}/${gp}/pitstops.json`).then(response => {
       console.log('Resposta: ', response.data);
       setPitStops(response.data.MRData.RaceTable.Races[0].PitStops)
       setResultado()
@@ -85,7 +85,7 @@ function App() {
   }
 
   function getResultGP() {
-    axios.get(`http://ergast.com/api/f1/${ano}/${gp}/results.json`).then(response => {
+    axios.get(`https://ergast.com/api/f1/${ano}/${gp}/results.json`).then(response => {
       console.log('Resposta: ', response.data);
       setResultado(response.data.MRData.RaceTable.Races[0].Results)
       setPitStops()
@@ -95,7 +95,7 @@ function App() {
   }
 
   function getQualyGP() {
-    axios.get(`http://ergast.com/api/f1/${ano}/${gp}/qualifying.json`).then(response => {
+    axios.get(`https://ergast.com/api/f1/${ano}/${gp}/qualifying.json`).then(response => {
       console.log('Resposta: ', response.data);
       setQualy(response.data.MRData.RaceTable.Races[0].QualifyingResults)
       setPitStops()
